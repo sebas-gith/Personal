@@ -14,7 +14,7 @@ Caracteristicas
 
 ## 🚀 Estructura del proyecto
 
-Dentro de su proyecto Astro, verá las siguientes carpetas y archivos:
+Dentro del proyecto Astro, verá las siguientes carpetas y archivos:
 
 ```
 ├── public/
