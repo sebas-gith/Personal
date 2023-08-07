@@ -1,154 +1,451 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+@font-face {
+  font-family: "pacifico";
+  src: url("/fonts/Pacifico-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+}
 
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
-}
-@font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-regular.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-body {
-	font-family: 'Atkinson', sans-serif;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
-}
-main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
-}
-h1 {
-	font-size: 3.052em;
-}
-h2 {
-	font-size: 2.441em;
-}
-h3 {
-	font-size: 1.953em;
-}
-h4 {
-	font-size: 1.563em;
-}
-h5 {
-	font-size: 1.25em;
-}
-strong,
-b {
-	font-weight: 700;
-}
-a {
-	color: var(--accent);
-}
-a:hover {
-	color: var(--accent);
-}
-p {
-	margin-bottom: 1em;
-}
-.prose p {
-	margin-bottom: 2em;
-}
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-input {
-	font-size: 16px;
-}
-table {
-	width: 100%;
-}
-img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 8px;
-}
-code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
-}
-pre {
-	padding: 1.5em;
-	border-radius: 8px;
-}
-pre > code {
-	all: unset;
-}
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0px;
-	font-size: 1.333em;
-}
-hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
-}
-@media (max-width: 720px) {
-	body {
-		font-size: 18px;
-	}
-	main {
-		padding: 1em;
-	}
+  --bg-home: #8a8a8a;
+  --bg-nav: #222223;
+  --bg-about: #fff;
+  --bg-cv: #1e90ff;
+  --bg-projects: #1d1d1d;
+  --text-p: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
-	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
-	white-space: nowrap;
+::-webkit-scrollbar {
+  display: none;
+}
+
+.navigation-var {
+  position: fixed;
+  display: flex;
+  font-family: pacifico;
+  background: var(--bg-nav);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navigation-var ul {
+  display: flex;
+  gap: 40px;
+  margin-right: 50px;
+}
+
+.navigation-var ul li {
+  list-style: none;
+}
+
+.navigation-var ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navigation-var ul li a:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #0078d4;
+  transition: 0.3s;
+}
+.logo {
+  margin-left: 30px;
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--bg-cv);
+}
+
+.hamburger {
+  position: relative;
+  margin-right: 30px;
+  display: none;
+  width: 35px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  z-index: 200;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active::before {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+.hamburger.is-active::after {
+  transform: rotate(45deg) translate(-9px, -9px);
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  background-color: #12002f;
+  padding-top: 120px;
+  transition: 0.4s;
+}
+
+.mobile-nav a {
+  display: blcok;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 16px;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background-color: #1f103f;
+  color: #fff;
+  text-decoration: none;
+}
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.mobile-nav a:hover {
+  background-color: #211f44;
+}
+
+.home {
+  background-image: url("../images/back-tecnology-web.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.home .who {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.home h1 {
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 22ch;
+  animation: typing 2s steps(22), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+.home .who .links {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+}
+.home .who .links a:nth-child(4) {
+  margin-top: 0;
+  text-decoration: none;
+  background-color: var(--bg-cv);
+  padding: 10px;
+  width: 140px;
+  border-radius: 20px;
+  color: white;
+}
+
+.home .who .links svg {
+  width: 30px;
+  color: white;
+}
+
+.home .who .links img {
+  width: 30px;
+}
+
+.home .hero-image {
+  animation: morph 9s ease-in-out infinite;
+  background-image: url("../images/me.jpg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 4px solid #064288;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  height: 22rem;
+  position: relative;
+  transition: all 1s ease-in-out;
+  width: 22rem;
+}
+
+.bi-linkedin {
+  fill: #0077b5; /* Color de LinkedIn */
+  padding: 2px; /* */
+}
+
+.about {
+  background-color: var(--bg-about);
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.about h1 {
+  font-family: pacifico;
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+.about p {
+  width: 80%;
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: var(--text-p);
+  margin-bottom: 30px;
+}
+
+.stack {
+  width: 88vw;
+  height: 20vh;
+  overflow: hidden;
+}
+
+.stack-list {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  animation: slide 10s linear infinite;
+}
+
+.stack-list li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vh;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin: 50px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(88vw);
+  }
+  100% {
+    transform: translate(-188vw);
+  }
+}
+
+.projects {
+  background-color: var(--bg-projects);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 40px 60px 40px;
+  flex-flow: row wrap;
+}
+.projects h2 {
+  font-size: 20px;
+  color: #fff;
+  font-family: var(--text-p);
+  width: 100%;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.projects h1 {
+  font-size: 50px;
+  color: #fff;
+  font-family: pacifico;
+  width: 100%;
+  text-align: center;
+}
+
+.project {
+  width: 350px;
+  height: 250px;
+  align-self: center;
+  border: none;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.project .enlace {
+  margin: 0;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.project .bi-link {
+  fill: #0077b5;
+}
+
+.project:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in;
+}
+
+.contacto {
+  height: 100%;
+  padding: 50px 40px 60px 40px;
+}
+
+.contacto h1 {
+  font-size: 50px;
+  font-family: pacifico;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222223;
+  padding: 4rem;
+  text-align: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.footer span {
+  width: 100%;
+  font-size: 30px;
+  font-family: var(--text-p);
+  color: #fff;
+  bottom: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .projects {
+    height: auto;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .projects {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+  .home {
+    flex-direction: column;
+    align-items: center;
+  }
+  .home .who {
+    justify-content: center;
+    margin: 20px;
+  }
+  .about p {
+    width: 90%;
+  }
+  .about {
+    height: auto;
+    padding: 20px;
+  }
+  .stack image {
+    width: 40px;
+    margin: 10px;
+  }
+  .projects {
+    height: auto;
+  }
+
+  .navigation-var ul {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero-image {
+    height: 100px;
+    width: 100px;
+  }
+  .projects {
+    padding-top: 90px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .hero-image {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-right: transparent;
+  }
+}
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
 }

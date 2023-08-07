@@ -1,0 +1,19 @@
+---
+import Enlace from "./icons/Link.astro";
+import Github from "./icons/Github.astro";
+
+const {img, enlaceGithub, enlaceWeb, title} = Astro.props
+---
+
+<div class="project">
+  <h2>{title}</h2>
+    <img src={img} alt="tres-en-raya" width="100%" height="80%" />
+    <div class="enlace">
+      <a href={enlaceGithub} target="_blank"
+        ><Github /></a
+      >
+      <a href={enlaceWeb} target="_blank"
+        ><Enlace width="32" height="32" /></a
+      >
+    </div>
+</div>

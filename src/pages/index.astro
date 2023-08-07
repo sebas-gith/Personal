@@ -1,50 +1,156 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE } from "../consts";
+import "../styles/global.css";
+import me from "../images/me.jpg";
+import Github from "../components/icons/Github.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import codeWars from "../images/codewars.svg";
+import tresEnRaya from "../images/tic-tac-toe.png";
+import Project from "../components/Project.astro";
+import to_do from "../images/to-do.png";
+import calc from "../images/calc.png";
+import contraGener from "../images/contra_gener.png";
+import html5 from "../images/html-5.svg";
+import css3 from "../images/css-3.svg";
+import javascript from "../images/javascript.svg";
+import mysql from "../images/mysql.svg";
+import php from "../images/php.svg";
+import bootstrap from "../images/bootstrap.svg";
+import git_icon from "../images/git-icon.svg";
+import react from "../images/react.svg";
+import Twitter from "../components/icons/Twitter.astro";
+import cepva from "../images/cepva.png";
+import Reddit from "../components/icons/Reddit.astro";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{SITE_TITLE}</title>
+  </head>
+  <body>
+    <header class="navigation-var">
+      <a href="#" class="logo">Sebastian <span>Alvarez</span></a>
+      <ul>
+        <li><a href="#Inicio">Inicio</a></li>
+        <li><a href="#SobreMi">Sobre mi</a></li>
+        <li><a href="#Proyectos">Proyectos</a></li>
+        <li><a href="#Contactos">Contacto</a></li>
+      </ul>
+      <button class="hamburger" id="hamburguer">
+        <div class="bar"></div>
+      </button>
+      <nav class="mobile-nav" id="mobile-nav">
+        <a href="#Inicio">Inicio</a>
+        <a href="#SobreMi">Sobre mi</a>
+        <a href="#Proyectos">Proyectos</a>
+        <a href="#Contactos">Contacto</a>
+      </nav>
+    </header>
+    <div class="redes"></div>
+    <section class="home" id="Inicio">
+      <div class="hero-image"></div>
+      <div class="who">
+        <h1>Programador fullstack</h1>
+        <p>Apasionado programador amante de la tecnología.</p>
+        <div class="links">
+          <a href="https://github.com/sebas-gith/" target="_blank"><Github /></a
+          >
+          <a href="https://www.linkedin.com/in/sebastian-g-alvarez-c-99744b20a/"
+            ><Linkedin width="32" height="32" /></a
+          >
+          <a href="https://www.codewars.com/users/sebas206" target="_blank"
+            ><img src={codeWars} alt="Code Wars" /></a
+          >
+          <a target="_blank" href="">Ver CV</a>
+        </div>
+      </div>
+    </section>
+  </body>
+  <section class="about" id="SobreMi">
+    <h1>Sobre mi</h1>
+    <p>
+      Como programador web, mi experiencia se centra en el desarrollo de
+      aplicaciones dinámicas y la gestión de bases de datos. Soy un autodidacta
+      apasionado que siempre busca nuevos desafíos y soluciones innovadoras.
+      Estoy preparado para aportar mi creatividad y conocimiento en cada
+      proyecto en el que participe. Mi objetivo es seguir creciendo
+      profesionalmente y contribuir al éxito de cualquier equipo o empresa en la
+      que trabaje. La tecnología es mi pasión, y mi determinación para seguir
+      aprendiendo y mejorando es mi mayor fortaleza. Estoy emocionado por las
+      oportunidades que me esperan en este apasionante campo de la programación
+      web.
+    </p>
+    <div class="stack">
+      <div class="stack-list">
+        <li><img src={html5} width="100px" alt="html5" /></li>
+        <li><img src={css3} width="100px" alt="css3" /></li>
+        <li><img src={javascript} width="100px" alt="javascript" /></li>
+        <li><img src={php} width="100px" alt="php" /></li>
+        <li><img src={mysql} width="100px" alt="mysql" /></li>
+        <li><img src={bootstrap} alt="bootstrap" width="100px" /></li>
+        <li><img src={git_icon} alt="git-icon" width="100px" /></li>
+        <li><img src={react} alt="react" width="100px" /></li>
+      </div>
+    </div>
+  </section>
+  <section class="projects" id="Proyectos">
+    <h1>Proyectos</h1>
+    <Project
+      title="Tres-en-raya"
+      img={tresEnRaya}
+      enlaceGithub="https://github.com/sebas-gith/tres-en-raya"
+      enlaceWeb="https://tres-en-raya-sigma.vercel.app/"
+    />
+    <Project
+      title="To-do App"
+      img={to_do}
+      enlaceGithub="https://github.com/sebas-gith/todoApp"
+      enlaceWeb="https://sebas-gith.github.io/todoApp/"
+    />
+    <Project
+      title="Calculadora"
+      img={calc}
+      enlaceGithub="https://github.com/sebas-gith/CalculatorJs"
+      enlaceWeb="https://sebas-gith.github.io/CalculatorJs/"
+    />
+    <Project
+      title="Generador de contraseñas"
+      img={contraGener}
+      enlaceGithub="https://github.com/sebas-gith/Generador_de_contrasenas"
+      enlaceWeb="https://sebas-gith.github.io/Generador_de_contrasenas/"
+    />
+    <Project
+      title="Politécnico Virgen de la Altagracia"
+      img={cepva}
+      enlaceGithub="http://cepva.edu.do/Cepva_php/view/Login/creadores/creadores.html"
+      enlaceWeb="http://cepva.edu.do/Cepva_php/view/Login/"
+    />
+    <Project
+      title="Calculadora"
+      img={tresEnRaya}
+      enlaceGithub="https://github.com/sebas-gith/tres-en-raya"
+      enlaceWeb="https://tres-en-raya-sigma.vercel.app/"
+    />
+  </section>
+  <section class="contacto" id="Contactos"><h1>Contacto</h1></section>
+  <footer class="footer">
+    <a href="https://github.com/sebas-gith/" target="_blank"
+      ><Github width="60" height="60" /></a
+    >
+    <a
+      href="https://www.linkedin.com/in/sebastian-g-alvarez-c-99744b20a/"
+      target="_blank"><Linkedin width="60" height="60" /></a
+    >
+    <a href="https://www.codewars.com/users/sebas206"
+      ><img src={codeWars} alt="codewars" width="60px" /></a
+    >
+    <a href="https://twitter.com/SebastianAlvaz" target="_blank"
+      ><Twitter width="60" height="60" /></a
+    >
+    <span>© 2022-2023 Sebastian Alvarez</span>
+  </footer>
+  <script src="./script.js"></script>
 </html>
