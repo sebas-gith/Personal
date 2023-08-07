@@ -52,10 +52,12 @@ body {
   display: flex;
   gap: 40px;
   margin-right: 50px;
+
 }
 
 .navigation-var ul li {
   list-style: none;
+  height: 100%;
 }
 
 .navigation-var ul li a {
@@ -198,6 +200,7 @@ body {
   background-color: var(--bg-cv);
   padding: 10px;
   width: 140px;
+  font-family: 'Times New Roman', Times, serif;
   border-radius: 20px;
   color: white;
 }
@@ -349,6 +352,13 @@ body {
   font-family: pacifico;
   text-align: center;
 }
+.contacto .icons {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
 
 .footer {
   display: flex;
@@ -413,9 +423,8 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  .hero-image {
-    height: 100px;
-    width: 100px;
+  .contacto .icons {
+    gap: 30px;
   }
   .projects {
     padding-top: 90px;
