@@ -52,7 +52,6 @@ body {
   display: flex;
   gap: 40px;
   margin-right: 50px;
-
 }
 
 .navigation-var ul li {
@@ -181,11 +180,12 @@ body {
   width: 22ch;
   animation: typing 2s steps(22), blink 0.5s infinite step-end alternate;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 
 .home .who .links {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   flex-wrap: wrap;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   padding: 10px;
@@ -200,7 +200,7 @@ body {
   background-color: var(--bg-cv);
   padding: 10px;
   width: 140px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   border-radius: 20px;
   color: white;
 }
@@ -400,7 +400,6 @@ body {
   }
   .home .who {
     justify-content: center;
-    margin: 20px;
   }
   .about p {
     width: 90%;
@@ -426,14 +425,35 @@ body {
   .contacto .icons {
     gap: 30px;
   }
+  .hero-image {
+    margin-top: 40px;
+    height: 16rem !important;
+    width: 16rem !important;
+  }
+  .home .who {
+    padding: 10px 20px 10px 20px;
+  }
+
+  .home h1 {
+    font-size: 22px;
+  }
+
   .projects {
     padding-top: 90px;
   }
+  .navigation-var .logo {
+    font-size: 20px;
+  }
+  .contacto {
+    padding-bottom: 80px;
+  }
 }
 @media screen and (max-width: 360px) {
-  .hero-image {
-    height: 100px;
-    width: 100px;
+  .home {
+    width: auto;
+  }
+  .home .who {
+    display: block;
   }
 }
 
