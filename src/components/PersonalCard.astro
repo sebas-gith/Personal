@@ -1,0 +1,13 @@
+---
+import "../styles/global.css"
+const {name, image, description} = Astro.props
+---
+
+<div class="card">
+    <img src={image} alt={name}  />
+    <div class="card__container">
+      <h4><b>{name}</b></h4> 
+      <p>{description}</p> 
+    </div>
+</div>
+  
