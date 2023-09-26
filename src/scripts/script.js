@@ -1,4 +1,4 @@
-const menu_btn = document.getElementById('hamburguer')
+const menu_btn = document.getElementById('desplegable')
 const mobile_menu = document.getElementById('mobile-nav')
 
 mobile_menu.childNodes.forEach(a => {

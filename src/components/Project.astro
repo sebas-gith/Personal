@@ -7,12 +7,12 @@ const {img, enlaceGithub, enlaceWeb, title} = Astro.props
 
 <div class="project">
   <h2>{title}</h2>
-    <img src={img} alt="tres-en-raya" width="100%" height="80%" />
+    <img src={img} alt="tres-en-raya" width="100%" height="100%" />
     <div class="enlace">
-      <a href={enlaceGithub} target="_blank"
+      <a href={enlaceGithub} target="_blank" aria-label="Github"
         ><Github /></a
       >
-      <a href={enlaceWeb} target="_blank"
+      <a href={enlaceWeb} target="_blank" aria-label="Pagina_web"
         ><Enlace width="32" height="32" /></a
       >
     </div>
