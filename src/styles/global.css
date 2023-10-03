@@ -615,6 +615,10 @@ body {
   .Logros__certificado__text{
     display: none;
   }
+
+  .stack-list li {
+    margin: 15px;
+  }
 }
 @media screen and (max-width: 360px) {
   .home {
@@ -628,7 +632,7 @@ body {
     margin: auto;
   }
   .stack-list li {
-    margin: 15px;
+    margin: 10px;
   }
 }
 
