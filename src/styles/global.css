@@ -177,8 +177,8 @@ body {
   font-family: monospace;
   white-space: nowrap;
   border-right: 4px solid;
-  width: 22ch;
-  animation: typing 2s steps(22), blink 0.5s infinite step-end alternate;
+  width: 24ch;
+  animation: typing 1.7s steps(24), blink 0.5s infinite step-end alternate;
   overflow: hidden;
   margin-bottom: 10px;
 }
@@ -517,14 +517,16 @@ body {
   .colaboradores {
     height: auto;
   }
-}
-@media screen and (max-width: 1000px) {
-    .navigation-var ul {
+  .navigation-var ul {
     display: none;
   }
   .desplegable {
     display: block;
   }
+}
+@media screen and (max-width: 1000px) {
+
+
 }
 
 @media screen and (max-width: 900px) {
@@ -614,9 +616,16 @@ body {
     font-size: 30px;
     margin: auto;
   }
+  .stack-list {
+    animation: slide 12s ease infinite;
+
+  }
+  .stack-list li {
+    margin: 15px;
+  }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 350px) {
   .Logros__certificado img{
     width: 150px;
     height: 100px;
@@ -624,6 +633,10 @@ body {
   .Logros__certificado{
     width: 200px;
   }
+  .home h1 {
+    font-size: 16px;
+  }
+
 }
 
 @keyframes typing {
