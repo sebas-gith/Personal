@@ -353,6 +353,44 @@ body {
   transition: 0.5s ease-in;
 }
 
+.recomendaciones {
+  height: auto;
+  padding-top: 30px;
+}
+
+.recomendaciones h1 {
+  font-size: 50px;
+  font-family: pacifico;
+  text-align: center;
+  margin: 20px;
+}
+.recomendaciones__contenedor{
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;  
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.recomendacion {
+  height: 350px;
+  width: 225px;
+  border: 1px solid #000;
+  transition: 1s;
+}
+
+
+.recomendacion__image{
+  width: 100%;
+  height: 100%;
+}
+
+.recomendacion:hover{
+  box-shadow: 0 16px 16px 0 rgba(0,0,0,0.2);
+}
+
 .contacto {
   height: 100%;
   padding: 50px 40px 60px 40px;
@@ -574,6 +612,7 @@ body {
     height: 16rem !important;
     width: 16rem !important;
   }
+
   .home .who {
     padding: 10px 20px 10px 20px;
   }
@@ -591,6 +630,16 @@ body {
   .contacto {
     padding-bottom: 80px;
   }
+
+  .recomendacion{
+    width: 175px;
+    height: 250;
+  }
+
+  .recomendaciones h1{
+    font-size: 30px;
+  }
+
   .colaboradores h1{
     font-size: 30px;
   }

@@ -1,0 +1,6 @@
+---
+const {imgSrc, link} = Astro.props
+---
+<a href={link} aria-label="Imagen de recomendacion" class="recomendacion" target="_blank">
+    <img class="recomendacion__image" src={imgSrc} alt="Imagen de recomendacion">
+</a>

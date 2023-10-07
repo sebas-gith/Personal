@@ -20,51 +20,77 @@ import react from "../images/react.svg";
 import Twitter from "../components/icons/Twitter.astro";
 import cepva from "../images/cepva.png";
 import Reddit from "../components/icons/Reddit.astro";
-import gmail from "../images/gmail.svg"
-import pagina from "../images/pagina.png"
-import curriculum from "../components/Curriculum_0-0-2.pdf"
-import tranlateEnEs from "../images/translate en-es.png"
+import gmail from "../images/gmail.svg";
+import pagina from "../images/pagina.png";
+import curriculum from "../components/Curriculum_0-0-2.pdf";
+import tranlateEnEs from "../images/translate en-es.png";
 import PageLayout from "../layouts/PageLayout.astro";
-import Ismael from '../images/IMG-ISMAEL.png'
-import Steven from '../images/Steven.jpg'
-import Keison from '../images/Keison.jpg'
-import Javier from '../images/Javier.png'
+import Ismael from "../images/IMG-ISMAEL.png";
+import Steven from "../images/Steven.jpg";
+import Keison from "../images/Keison.jpg";
+import Javier from "../images/Javier.png";
 import PersonalCard from "../components/PersonalCard.astro";
-import certificadoScrum from '../images/cert-scrum.png'
-import certificacionNetwork from '../images/cert-networking.png'
-import certificacionCybersecurity from '../images/cert-cybersecurity.png'
+import certificadoScrum from "../images/cert-scrum.png";
+import certificacionNetwork from "../images/cert-networking.png";
+import certificacionCybersecurity from "../images/cert-cybersecurity.png";
+import Recomendacion from "../components/Recomendacion.astro";
+import jhoanLetter from "../images/Jhoan_guerrero.jpg";
+import mariaLetter from "../images/MariaIsabel.jpg";
+import directLetter from "../images/Directora_xiomara.jpg";
+import joseLetter from "../images/Jose_sierra.jpg";
+import faustoLetter from "../images/Fausto_familia.jpg";
+import jhoanLetterLink from '../images/Jhoan_guerrero.pdf'
+import faustoLetterLink from '../images/Fausto_familia.pdf'
+import directLetterLink from '../images/Directora_xiomara.pdf'
+import mariaLetterLink from '../images/MariaIsabel.pdf'
+import joseLetterLink from '../images/Jose_sierra.pdf'
 ---
+
 <PageLayout title="Home-Sebastian_Alvarez">
-    <div class="redes"></div>
-    <section class="home" id="Inicio">
-      <div class="hero-image"></div>
-      <div class="who">
-        <h1>Desarrollador fullstack</h1>
-        <p>Desarrollador y amante de la tecnología.</p>
-        <div class="links">
-          <a href="https://github.com/sebas-gith/" target="_blank" aria-label="Enlace a pagina de Github"><Github /></a
-          >
-          <a href="https://www.linkedin.com/in/sebastian-g-alvarez-c-99744b20a/" aria-label="Enlace a pagina de Linkedin"
-            ><Linkedin width="32" height="32" /></a
-          >
-          <a href="https://www.codewars.com/users/sebas206" target="_blank" aria-label="Enlace a pagina de CodeWars"
-            ><img src={codeWars} alt="Code Wars" width="32" height="32"/></a
-          >
-          <a target="_blank" href={curriculum}><strong>Curriculum</strong></a>
-        </div>
+  <div class="redes"></div>
+  <section class="home" id="Inicio">
+    <div class="hero-image"></div>
+    <div class="who">
+      <h1>Desarrollador fullstack</h1>
+      <p>Desarrollador y amante de la tecnología.</p>
+      <div class="links">
+        <a
+          href="https://github.com/sebas-gith/"
+          target="_blank"
+          aria-label="Enlace a pagina de Github"><Github /></a
+        >
+        <a
+          href="https://www.linkedin.com/in/sebastian-g-alvarez-c-99744b20a/"
+          aria-label="Enlace a pagina de Linkedin"
+          ><Linkedin width="32" height="32" /></a
+        >
+        <a
+          href="https://www.codewars.com/users/sebas206"
+          target="_blank"
+          aria-label="Enlace a pagina de CodeWars"
+          ><img src={codeWars} alt="Code Wars" width="32" height="32" /></a
+        >
+        <a target="_blank" href={curriculum}><strong>Curriculum</strong></a>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+
   <section class="about" id="SobreMi">
     <div class="stack">
       <ul class="stack-list">
-        <li><img src={html5} width="100px" height="100px"  alt="html5" /></li>
-        <li><img src={css3} width="100px" height="100px"  alt="css3" /></li>
-        <li><img src={javascript} width="100px" height="100px"  alt="javascript" /></li>
-        <li><img src={php} width="100px" height="100px"  alt="php" /></li>
+        <li><img src={html5} width="100px" height="100px" alt="html5" /></li>
+        <li><img src={css3} width="100px" height="100px" alt="css3" /></li>
+        <li>
+          <img src={javascript} width="100px" height="100px" alt="javascript" />
+        </li>
+        <li><img src={php} width="100px" height="100px" alt="php" /></li>
         <li><img src={mysql} width="100px" height="100px" alt="mysql" /></li>
-        <li><img src={bootstrap} alt="bootstrap" width="100px" height="100px"  /></li>
-        <li><img src={git_icon} alt="git-icon" width="100px" height="100px"  /></li>
+        <li>
+          <img src={bootstrap} alt="bootstrap" width="100px" height="100px" />
+        </li>
+        <li>
+          <img src={git_icon} alt="git-icon" width="100px" height="100px" />
+        </li>
         <li><img src={react} alt="react" width="100px" height="100px" /></li>
       </ul>
     </div>
@@ -81,7 +107,6 @@ import certificacionCybersecurity from '../images/cert-cybersecurity.png'
       oportunidades que me esperan en este apasionante campo de la programación
       web.
     </p>
-    
   </section>
   <section class="projects" id="Proyectos">
     <h1>Proyectos</h1>
@@ -122,23 +147,72 @@ import certificacionCybersecurity from '../images/cert-cybersecurity.png'
       enlaceWeb="#"
     />
     <Project
-    title="Traductor del ingles al español"
-    img={tranlateEnEs}
-    enlaceGithub="https://github.com/sebas-gith/TranslateEsEn_React"
-    enlaceWeb="https://translate-es-en-react.vercel.app/"
-  />
+      title="Traductor del ingles al español"
+      img={tranlateEnEs}
+      enlaceGithub="https://github.com/sebas-gith/TranslateEsEn_React"
+      enlaceWeb="https://translate-es-en-react.vercel.app/"
+    />
+  </section>
+
+  <section class="recomendaciones" id="Recomendaciones">
+    <h1>Recomendaciones</h1>
+    <div class="recomendaciones__contenedor">
+      <Recomendacion link={jhoanLetterLink} imgSrc={jhoanLetter} />
+      <Recomendacion link={mariaLetterLink} imgSrc={mariaLetter} />
+      <Recomendacion link={directLetterLink} imgSrc={directLetter} />
+      <Recomendacion link={faustoLetterLink}  imgSrc={faustoLetter} />
+      <Recomendacion link={joseLetterLink}  imgSrc={joseLetter} />
+    </div>
   </section>
 
   <section class="colaboradores" id="Colaboradores">
     <h1>👥 Colaboradores</h1>
     <div class="cards">
-      <a href="https://ismael.paulino.pro" target="_blank" aria-label="Ismael"><PersonalCard name="Ismael Paulino" image={Ismael} description="Frontend developer"/></a>
-      <a href="https://tecnicoangelsteven.000webhostapp.com/" target="_blank" aria-label="Steven"><PersonalCard name="Angel Gonzalez" image={Steven} description="Frontend developer"/></a>
-      <a href="https://portfoliokei.000webhostapp.com" target="_blank" aria-label="Keison"><PersonalCard name="Keison Cerda" image={Keison} description="Frontend developer"/></a>
-      <a href="https://javier-cedano.vercel.app/" target="_blank" aria-label="Javier"><PersonalCard name="Javier Cedano" image={Javier} description="Backend developer"/></a>
+      <a href="https://ismael.paulino.pro" target="_blank" aria-label="Ismael"
+        ><PersonalCard
+          name="Ismael Paulino"
+          image={Ismael}
+          description="Frontend developer"
+        /></a
+      >
+      <a
+        href="https://tecnicoangelsteven.000webhostapp.com/"
+        target="_blank"
+        aria-label="Steven"
+        ><PersonalCard
+          name="Angel Gonzalez"
+          image={Steven}
+          description="Frontend developer"
+        /></a
+      >
+      <a
+        href="https://portfoliokei.000webhostapp.com"
+        target="_blank"
+        aria-label="Keison"
+        ><PersonalCard
+          name="Keison Cerda"
+          image={Keison}
+          description="Frontend developer"
+        /></a
+      >
+      <a
+        href="https://javier-cedano.vercel.app/"
+        target="_blank"
+        aria-label="Javier"
+        ><PersonalCard
+          name="Javier Cedano"
+          image={Javier}
+          description="Backend developer"
+        /></a
+      >
     </div>
     <section>
-      <p>Con la colaboración de un equipo talentoso y apreciados amigos, desarrollé el sistema escolar para el Centro Educativo Politécnico Virgen de la Altagracia. Este proyecto fue un logro significativo que contribuyó a la mejora de la gestión educativa en la institución.</p>
+      <p>
+        Con la colaboración de un equipo talentoso y apreciados amigos,
+        desarrollé el sistema escolar para el Centro Educativo Politécnico
+        Virgen de la Altagracia. Este proyecto fue un logro significativo que
+        contribuyó a la mejora de la gestión educativa en la institución.
+      </p>
     </section>
   </section>
   <section class="Logros" id="Logros">
@@ -146,62 +220,115 @@ import certificacionCybersecurity from '../images/cert-cybersecurity.png'
     <div class="Logros__certificado__container">
       <div class="Logros__certificado">
         <div>
-          <img src={certificacionCybersecurity} alt="">
+          <img src={certificacionCybersecurity} alt="" />
         </div>
         <div class="Logros__certificado__body">
           <h2><strong>Introduction to cybersecurity</strong></h2>
-          <br>
-          <p class="Logros__certificado__text">Certificación de Cisco, en la que adquirí conocimientos fundamentales en ciberseguridad. Durante el curso, me familiaricé con aspectos clave como antivirus, diversos tipos de malware como ransomware, gusanos, troyanos, entre otros. También, estudié el funcionamiento de los firewalls y las estrategias de defensa para contrarrestar estas amenazas. Por último, exploré herramientas como NMAP.</p>
-          <br>
-          <div class="Logros__certificado__enlace"><span>JULIO 2023</span> <a href="https://www.credly.com/badges/2bfeaa02-c398-4ac4-9ca0-b36b598d9cc8/linked_in_profile" target="_blank">Ver certificado</a></div>
+          <br />
+          <p class="Logros__certificado__text">
+            Certificación de Cisco, en la que adquirí conocimientos
+            fundamentales en ciberseguridad. Durante el curso, me familiaricé
+            con aspectos clave como antivirus, diversos tipos de malware como
+            ransomware, gusanos, troyanos, entre otros. También, estudié el
+            funcionamiento de los firewalls y las estrategias de defensa para
+            contrarrestar estas amenazas. Por último, exploré herramientas como
+            NMAP.
+          </p>
+          <br />
+          <div class="Logros__certificado__enlace">
+            <span>JULIO 2023</span>
+            <a
+              href="https://www.credly.com/badges/2bfeaa02-c398-4ac4-9ca0-b36b598d9cc8/linked_in_profile"
+              target="_blank">Ver certificado</a
+            >
+          </div>
         </div>
       </div>
       <div class="Logros__certificado">
         <div>
-          <img src={certificacionNetwork} alt="">
+          <img src={certificacionNetwork} alt="" />
         </div>
         <div class="Logros__certificado__body">
           <h2><strong>Networking basics</strong></h2>
-          <br>
-          <p class="Logros__certificado__text">Certificación de Cisco Networking Academy, en la que adquirí una sólida comprensión de los fundamentos de redes, abarcando temas como Internet, protocolo IP, IPv6, el Modelo OSI, el Modelo TCP/IP, entre otros. Además, desarrollé habilidades prácticas en la configuración y gestión de dispositivos físicos como routers y switches, contribuyendo así a mi preparación en el campo de las tecnologías de red.</p>
-          <br>
-          <div class="Logros__certificado__enlace"><span>JULIO 2023 </span> <a href="https://www.credly.com/badges/0dde6ed9-e73e-4c3f-b5c9-de8359c7afa2/linked_in_profile" target="_blank" aria-label="certificado">Ver certificado</a></div>
+          <br />
+          <p class="Logros__certificado__text">
+            Certificación de Cisco Networking Academy, en la que adquirí una
+            sólida comprensión de los fundamentos de redes, abarcando temas como
+            Internet, protocolo IP, IPv6, el Modelo OSI, el Modelo TCP/IP, entre
+            otros. Además, desarrollé habilidades prácticas en la configuración
+            y gestión de dispositivos físicos como routers y switches,
+            contribuyendo así a mi preparación en el campo de las tecnologías de
+            red.
+          </p>
+          <br />
+          <div class="Logros__certificado__enlace">
+            <span>JULIO 2023</span>
+            <a
+              href="https://www.credly.com/badges/0dde6ed9-e73e-4c3f-b5c9-de8359c7afa2/linked_in_profile"
+              target="_blank"
+              aria-label="certificado">Ver certificado</a
+            >
+          </div>
         </div>
-      </div> 
+      </div>
       <div class="Logros__certificado">
         <div>
-          <img src={certificadoScrum} alt="">
+          <img src={certificadoScrum} alt="" />
         </div>
         <div class="Logros__certificado__body">
-          <h2><strong>Scrum Foundation Professional Certification - SFPC™</strong></h2>
-          <br>
-          <p class="Logros__certificado__text">La Certificación Profesional Scrum Foundation (SFPC™) es un reconocido estándar en la industria para profesionales que buscan comprender y aplicar los principios y prácticas ágiles de Scrum en sus proyectos. Esta certificación valida tu conocimiento en Scrum, un enfoque colaborativo y flexible para la gestión de proyectos y desarrollo de productos. A través de la Certificación SFPC™</p>
-          <br>
-          <div class="Logros__certificado__enlace"><span>SEP 2023</span> <a href="https://www.credly.com/badges/0f25ba1a-6233-4b4f-965f-0179875bdfb0/linked_in_profile" target="_blank" aria-label="certificado">Ver certificado</a></div>
+          <h2>
+            <strong>Scrum Foundation Professional Certification - SFPC™</strong>
+          </h2>
+          <br />
+          <p class="Logros__certificado__text">
+            La Certificación Profesional Scrum Foundation (SFPC™) es un
+            reconocido estándar en la industria para profesionales que buscan
+            comprender y aplicar los principios y prácticas ágiles de Scrum en
+            sus proyectos. Esta certificación valida tu conocimiento en Scrum,
+            un enfoque colaborativo y flexible para la gestión de proyectos y
+            desarrollo de productos. A través de la Certificación SFPC™
+          </p>
+          <br />
+          <div class="Logros__certificado__enlace">
+            <span>SEP 2023</span>
+            <a
+              href="https://www.credly.com/badges/0f25ba1a-6233-4b4f-965f-0179875bdfb0/linked_in_profile"
+              target="_blank"
+              aria-label="certificado">Ver certificado</a
+            >
+          </div>
         </div>
-      </div> 
-      <a class="Logros__link"  href="/logros/" aria-label="Logros__link">Ver todo...</a>
+      </div>
+      <a class="Logros__link" href="/logros/" aria-label="Logros__link"
+        >Ver todo...</a
+      >
     </div>
   </section>
   <section class="contacto" id="Contactos">
     <h1>👇 Contáctame</h1>
     <div class="icons">
-      <a href="https://github.com/sebas-gith/" target="_blank" aria-label="Github"
-        ><Github width="100" height="100" /></a
+      <a
+        href="https://github.com/sebas-gith/"
+        target="_blank"
+        aria-label="Github"><Github width="100" height="100" /></a
       >
       <a
         href="https://www.linkedin.com/in/sebastian-g-alvarez-c-99744b20a/"
-        target="_blank" aria-label="Linkedin"><Linkedin width="100" height="100" /></a
+        target="_blank"
+        aria-label="Linkedin"><Linkedin width="100" height="100" /></a
       >
 
-      <a href="https://twitter.com/SebastianAlvaz" target="_blank"
+      <a
+        href="https://twitter.com/SebastianAlvaz"
+        target="_blank"
         aria-label="Twitter"><Twitter width="100" height="100" /></a
       >
-      <a href="mailto:sebastianalvarezconcepcion@gmail.com" target="_blank" aria-label="mail"
-      ><img src={gmail} width="100px" height="100%" alt="gmail" /></a
-    >
-
+      <a
+        href="mailto:sebastianalvarezconcepcion@gmail.com"
+        target="_blank"
+        aria-label="mail"
+        ><img src={gmail} width="100px" height="100%" alt="gmail" /></a
+      >
     </div>
   </section>
-
 </PageLayout>
