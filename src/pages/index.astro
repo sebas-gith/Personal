@@ -1,6 +1,5 @@
 ---
-import "../styles/global.css";
-import me from "../images/me.jpg";
+import "../styles/main.css";
 import Github from "../components/icons/Github.astro";
 import Linkedin from "../components/icons/Linkedin.astro";
 import codeWars from "../images/codewars.svg";
@@ -47,8 +46,9 @@ import joseLetterLink from '../images/Jose_sierra.pdf'
 ---
 
 <PageLayout title="Home-Sebastian_Alvarez">
+<div style="width:  100%; height: 100%" data-idioma="es">
   <div class="redes"></div>
-  <section class="home" id="Inicio">
+  <section class="home" id="Inicio" >
     <div class="hero-image"></div>
     <div class="who">
       <h1>Desarrollador fullstack</h1>
@@ -254,7 +254,7 @@ import joseLetterLink from '../images/Jose_sierra.pdf'
           <p class="Logros__certificado__text">
             Certificación de Cisco Networking Academy, en la que adquirí una
             sólida comprensión de los fundamentos de redes, abarcando temas como
-            Internet, protocolo IP, IPv6, el Modelo OSI, el Modelo TCP/IP, entre
+            Internet, protocolo IP, IPv6, el change-mode-darklo OSI, el change-mode-darklo TCP/IP, entre
             otros. Además, desarrollé habilidades prácticas en la configuración
             y gestión de dispositivos físicos como routers y switches,
             contribuyendo así a mi preparación en el campo de las tecnologías de
@@ -331,4 +331,215 @@ import joseLetterLink from '../images/Jose_sierra.pdf'
       >
     </div>
   </section>
+  <footer class="footer">
+    <span>© 2023-2024 Sebastian Alvarez</span>
+  </footer>
+</div>
+<div data-idioma='us' style="width: 100%; height: 100%;">
+  <div class="redes"> <!-- Social Media -->
+  </div>
+  
+  <section class="home" id="Home"> <!-- Home -->
+      <div class="hero-image"></div>
+      <div class="who">
+          <h1>Fullstack Developer</h1>
+          <p>Developer and technology enthusiast.</p>
+          <div class="links">
+              <a href="https://github.com/sebas-gith/" target="_blank" aria-label="Link to Github page"><Github /></a>
+              <a href="https://www.linkedin.com/in/sebastian-g-alvarez-c-99744b20a/" aria-label="Link to Linkedin page"><Linkedin width="32" height="32" /></a>
+              <a href="https://www.codewars.com/users/sebas206" target="_blank" aria-label="Link to CodeWars page"><img src={codeWars} alt="Code Wars" width="32" height="32" /></a>
+              <a target="_blank" href={curriculum}><strong>Resume</strong></a>
+          </div>
+      </div>
+  </section>
+  
+  <section class="about" id="About"> <!-- About Me -->
+      <div class="stack">
+          <ul class="stack-list">
+              <li><img src={html5} width="100px" height="100px" alt="html5" /></li>
+              <li><img src={css3} width="100px" height="100px" alt="css3" /></li>
+              <li><img src={javascript} width="100px" height="100px" alt="javascript" /></li>
+              <li><img src={php} width="100px" height="100px" alt="php" /></li>
+              <li><img src={mysql} width="100px" height="100px" alt="mysql" /></li>
+              <li><img src={bootstrap} alt="bootstrap" width="100px" height="100px" /></li>
+              <li><img src={git_icon} alt="git-icon" width="100px" height="100px" /></li>
+              <li><img src={react} alt="react" width="100px" height="100px" /></li>
+          </ul>
+      </div>
+      <h1>About Me</h1>
+      <p>
+          As a web developer, my experience is focused on the development of dynamic applications and database management. I am a passionate self-learner who is always looking for new challenges and innovative solutions. I am prepared to bring my creativity and knowledge to every project I participate in. My goal is to continue growing professionally and contributing to the success of any team or company I work for. Technology is my passion, and my determination to keep learning and improving is my greatest strength. I am excited about the opportunities that await me in this exciting field of web development.
+      </p>
+  </section>
+  
+  <section class="projects" id="Projects"> <!-- Projects -->
+      <h1>Projects</h1>
+      <Project
+          title="Tic-Tac-Toe"
+          img={tresEnRaya}
+          githubLink="https://github.com/sebas-gith/tres-en-raya"
+          webLink="https://tres-en-raya-sigma.vercel.app/"
+      />
+      <Project
+          title="To-do App"
+          img={to_do}
+          githubLink="https://github.com/sebas-gith/todoApp"
+          webLink="https://sebas-gith.github.io/todoApp/"
+      />
+      <Project
+          title="Calculator"
+          img={calc}
+          githubLink="https://github.com/sebas-gith/CalculatorJs"
+          webLink="https://sebas-gith.github.io/CalculatorJs/"
+      />
+      <Project
+          title="Password Generator"
+          img={contraGener}
+          githubLink="https://github.com/sebas-gith/Generador_de_contrasenas"
+          webLink="https://sebas-gith.github.io/Generador_de_contrasenas/"
+      />
+      <Project
+          title="Polytechnic Virgen de la Altagracia"
+          img={cepva}
+          githubLink="http://cepva.edu.do/Cepva_php/view/Login/creadores/creadores.html"
+          webLink="http://cepva.edu.do/Cepva_php/view/Login/"
+      />
+      <Project
+          title="Website"
+          img={pagina}
+          githubLink="https://github.com/sebas-gith/Personal"
+          webLink="#"
+      />
+      <Project
+          title="English to Spanish Translator"
+          img={tranlateEnEs}
+          githubLink="https://github.com/sebas-gith/TranslateEsEn_React"
+          webLink="https://translate-es-en-react.vercel.app/"
+      />
+  </section>
+  <section class="recomendaciones" id="Recommendations">
+    <h1>Recommendations</h1>
+    <div class="recomendaciones__contenedor">
+        <Recomendacion link={jhoanLetterLink} imgSrc={jhoanLetter} />
+        <Recomendacion link={mariaLetterLink} imgSrc={mariaLetter} />
+        <Recomendacion link={directLetterLink} imgSrc={directLetter} />
+        <Recomendacion link={faustoLetterLink} imgSrc={faustoLetter} />
+        <Recomendacion link={joseLetterLink} imgSrc={joseLetter} />
+    </div>
+</section>
+
+<section class="colaboradores" id="Collaborators">
+    <h1>👥 Collaborators</h1>
+    <div class="cards">
+        <a href="https://ismael.paulino.pro" target="_blank" aria-label="Ismael">
+            <PersonalCard
+                name="Ismael Paulino"
+                image={Ismael}
+                description="Frontend developer"
+            />
+        </a>
+        <a href="https://tecnicoangelsteven.000webhostapp.com" target="_blank" aria-label="Steven">
+            <PersonalCard
+                name="Angel Gonzalez"
+                image={Steven}
+                description="Frontend developer"
+            />
+        </a>
+        <a href="https://portfoliokei.000webhostapp.com" target="_blank" aria-label="Keison">
+            <PersonalCard
+                name="Keison Cerda"
+                image={Keison}
+                description="Frontend developer"
+            />
+        </a>
+        <a href="https://javier-cedano.vercel.app" target="_blank" aria-label="Javier">
+            <PersonalCard
+                name="Javier Cedano"
+                image={Javier}
+                description="Backend developer"
+            />
+        </a>
+    </div>
+    <section>
+        <p>
+            With the collaboration of a talented team and dear friends,
+            I developed the school system for the Centro Educativo Politécnico Virgen de la Altagracia. This project was a significant achievement that contributed to the improvement of educational management at the institution.
+        </p>
+    </section>
+</section>
+
+<section class="Logros" id="Achievements">
+    <h1>Achievements</h1>
+    <div class="Logros__certificado__container">
+        <div class="Logros__certificado">
+            <div>
+                <img src={certificacionCybersecurity} alt="" />
+            </div>
+            <div class="Logros__certificado__body">
+                <h2><strong>Introduction to cybersecurity</strong></h2>
+                <br />
+                <p class="Logros__certificado__text">
+                    Cisco certification in which I acquired fundamental knowledge in cybersecurity. During the course, I became familiar with key aspects such as antivirus, various types of malware like ransomware, worms, trojans, among others. I also studied the functioning of firewalls and defense strategies to counter these threats. Finally, I explored tools like NMAP.
+                </p>
+                <br />
+                <div class="Logros__certificado__enlace">
+                    <span>JULY 2023</span>
+                    <a href="https://www.credly.com/badges/2bfeaa02-c398-4ac4-9ca0-b36b598d9cc8/linked_in_profile" target="_blank">View certificate</a>
+                </div>
+            </div>
+        </div>
+        <div class="Logros__certificado">
+            <div>
+                <img src={certificacionNetwork} alt="" />
+            </div>
+            <div class="Logros__certificado__body">
+                <h2><strong>Networking basics</strong></h2>
+                <br />
+                <p class="Logros__certificado__text">
+                    Cisco Networking Academy certification in which I gained a solid understanding of networking fundamentals, covering topics such as the Internet, IP protocol, IPv6, the OSI model, the TCP/IP model, among others. Additionally, I developed practical skills in configuring and managing physical devices like routers and switches, contributing to my preparation in the field of network technologies.
+                </p>
+                <br />
+                <div class="Logros__certificado__enlace">
+                    <span>JULY 2023</span>
+                    <a href="https://www.credly.com/badges/0dde6ed9-e73e-4c3f-b5c9-de8359c7afa2/linked_in_profile" target="_blank" aria-label="certificate">View certificate</a>
+                </div>
+            </div>
+        </div>
+        <div class="Logros__certificado">
+            <div>
+                <img src={certificadoScrum} alt="" />
+            </div>
+            <div class="Logros__certificado__body">
+                <h2>
+                    <strong>Scrum Foundation Professional Certification - SFPC™</strong>
+                </h2>
+                <br />
+                <p class="Logros__certificado__text">
+                    The Scrum Foundation Professional Certification (SFPC™) is a recognized industry standard for professionals looking to understand and apply agile principles and practices of Scrum in their projects. This certification validates your knowledge in Scrum, a collaborative and flexible approach to project management and product development. Through SFPC™ Certification
+                </p>
+                <br />
+                <div class="Logros__certificado__enlace">
+                    <span>SEPTEMBER 2023</span>
+                    <a href="https://www.credly.com/badges/0f25ba1a-6233-4b4f-965f-0179875bdfb0/linked_in_profile" target="_blank" aria-label="certificate">View certificate</a>
+                </div>
+            </div>
+        </div>
+        <a class="Logros__link" href="/logros/" aria-label="Logros__link">View all...</a>
+    </div>
+</section>
+<section class="contacto" id="Contact">
+    <h1>👇 Contact Me</h1>
+    <div class="icons">
+        <a href="https://github.com/sebas-gith/" target="_blank" aria-label="Github"><Github width="100" height="100" /></a>
+        <a href="https://www.linkedin.com/in/sebastian-g-alvarez-c-99744b20a/" target="_blank" aria-label="Linkedin"><Linkedin width="100" height="100" /></a>
+        <a href="https://twitter.com/SebastianAlvaz" target="_blank" aria-label="Twitter"><Twitter width="100" height="100" /></a>
+        <a href="mailto:sebastianalvarezconcepcion@gmail.com" target="_blank" aria-label="mail"><img src={gmail} width="100px" height="100%" alt="gmail" /></a>
+    </div>
+</section>
+<footer class="footer">
+  <span>© 2023-2024 Sebastian Alvarez</span>
+</footer>
+</div>
+
 </PageLayout>
+
