@@ -94,11 +94,15 @@ body {
   transition: 1s;
 }
 
+.navigation-var span {
+  cursor: pointer;
+}
 
 .navigation-var ul {
   display: flex;
   gap: 30px;
   margin-right:20px;
+
 }
 
 .navigation-var ul li {
@@ -238,6 +242,6 @@ body {
 
 @media screen and (max-width: 500px) {
   .navigation-var .logo {
-    font-size: 20px;
+    font-size: 16px;
   }
 }

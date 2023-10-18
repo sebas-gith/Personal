@@ -92,11 +92,11 @@ document.addEventListener('DOMContentLoaded', e => {
           elemento.style.display = 'none';
         }
       });
-    }else if(lang && lang == 'es'){
+    }else{
       const elementosIdioma = document.querySelectorAll('[data-idioma]');
       elementosIdioma.forEach(function(elemento) {
         const idiomaElemento = elemento.getAttribute('data-idioma');
-        if (idiomaElemento == lang) {
+        if (idiomaElemento == 'es') {
           if(elemento.tagName !== 'DIV'){
             elemento.style.display = 'flex';
           }else{
